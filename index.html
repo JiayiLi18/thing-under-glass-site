@@ -59,6 +59,27 @@
     margin-top: 2px;
     white-space: nowrap;
   }
+  .sidebar-author-links {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .sidebar-author-links a {
+    font-size: 11px;
+    color: #6a6580;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    transition: color 0.15s ease;
+    white-space: nowrap;
+  }
+  .sidebar-author-links a:hover {
+    color: #1a1a2e;
+  }
+  .sidebar-author-links a::before {
+    content: "→ ";
+    opacity: 0.5;
+  }
 
   /* ── Toggle button ── */
   #sidebar-toggle {
@@ -714,6 +735,7 @@
     }
     .sidebar-brand h1 { font-size: 14px; }
     .sidebar-brand p { display: none; }
+    .sidebar-author-links { display: none; }
     .nav-text { display: none; }
     .nav-item { padding: 6px 8px 6px 0; }
     #main { margin-left: 52px; width: calc(100% - 52px); }
@@ -739,6 +761,10 @@
     <div class="sidebar-brand">
       <h1>Jiayi's Dev Log</h1>
       <p>Supercell AI Lab 2026</p>
+      <div class="sidebar-author-links">
+        <a href="https://jiayi-portfolio.github.io/" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://www.linkedin.com/in/jiayi-li0414/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
     </div>
     <div class="timeline-nav" id="timeline-nav">
       <a href="#overview" class="nav-item active" data-target="overview">
